@@ -19,17 +19,6 @@ Are you tired of just "done" and "not done"? `Any Task` brings your notes to lif
 
 ---
 
-## 🚀 Installation
-
-### 📥 Manual Installation
-
-1. Go to your vault's plugin folder: `<Vault>/.obsidian/plugins/`.
-2. Create a folder named `obsidian-any-task`.
-3. Drop `main.js`, `manifest.json`, and `styles.css` inside.
-4. Reload Obsidian and toggle it **On** in **Community Plugins**.
-
----
-
 ## 🛠️ Development Workspace
 
 To contribute or customize the plugin:
