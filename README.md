@@ -1,28 +1,35 @@
-# Any Task Plugin
+# 📝 Any Task: Elevate Your Obsidian Workflow
 
-An Obsidian plugin that enhances the appearance of checkboxes (tasks) based on their content (the character between the brackets, e.g., `[x]`, `[/]`, `[>]`) and the current active theme.
+**Transform your simple checkboxes into a powerful, theme-aware task system.**
 
-## Features
+Are you tired of just "done" and "not done"? `Any Task` brings your notes to life by enabling a rich set of custom task symbols—like `/` for in-progress, `>` for scheduled, and `!` for urgent—all while ensuring they look **pixel-perfect** in your favorite Obsidian theme.
 
-- **Theme-Specific Adjustments**: Automatically detects the current theme and applies custom CSS fixes to ensure consistent task markers across different themes (Minimal, Blue Topaz, Things, AnuPpuccin, ITS Theme, Primary).
-- **Custom Task Symbols**: Supports a wide variety of task markers beyond just "completed" (e.g., in progress `/`, scheduled `>`, etc.).
+---
 
-## Installation
+**Author:** HMage ([highmagician@gmail.com](mailto:highmagician@gmail.com))
 
-### Manual Installation
-1. Download the latest release (`main.js`, `manifest.json`, `styles.css`).
-2. Create a folder named `obsidian-any-task` in your vault's `.obsidian/plugins/` directory.
-3. Move the downloaded files into that folder.
-4. Reload Obsidian and enable the plugin in the community plugins settings.
+---
 
-### Development
-1. Clone this repository.
-2. Run `npm install` to install dependencies.
-3. Run `npm run dev` to start the compilation in watch mode.
-4. Run `npm run build` for a production build.
+## ✨ Why You'll Love Any Task
 
-## How it works
-The plugin monitors the `css-change` event in Obsidian and updates a `data-x10-css-theme` attribute on the `document.body`. The provided `styles.css` then uses this attribute to apply theme-specific styles to the checkboxes.
+- 🎨 **Theme Harmony**: No more broken or misaligned icons. The plugin automatically detects your theme (Minimal, AnuPpuccin, Blue Topaz, and more) and applies surgical CSS fixes for a seamless look.
+- ✅ **Expressive Symbols**: Use a vast library of markers (`[/]`, `[>]`, `[<]`, `[!]`, `[-]`, etc.) to categorize your workflow at a glance.
+- 🚀 **Zero Configuration**: Simply enable the plugin, and it starts working instantly, adapting to your environment.
+- 💎 **Minimalist & Fast**: Lightweight logic that doesn't slow down your vault.
 
-## Credits
-Based on the X10 Task sample.
+---
+
+## 🛠️ Development Workspace
+
+To contribute or customize the plugin:
+
+```bash
+# Install dependencies
+npm install
+
+# Start development (watch mode)
+npm run dev
+
+# Create a production-ready bundle
+npm run build
+```

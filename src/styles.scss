@@ -18,6 +18,7 @@ input[type='checkbox']::after {
 
 input[type='checkbox']:checked::after {
 	-webkit-mask-image: none;
+	mask-image: none;
 	background-color: transparent;
 	content: var(--task-content);
 }
@@ -33,7 +34,7 @@ input[type=checkbox]:checked:not([data-task])::after {
 
 /* ### Minimal */
 
-[data-x10-css-theme='Minimal'] [data-task='/'] input[type=checkbox]:checked:after {
+[data-any-task-theme='Minimal'] [data-task='/'] input[type=checkbox]:checked:after {
 	border-radius: 0;
 	background-color: var(--background-modifier-accent);
 	content: ' ';
@@ -41,7 +42,7 @@ input[type=checkbox]:checked:not([data-task])::after {
 
 /* ### Blue Topaz */
 
-body[data-x10-css-theme='Blue Topaz'] .HyperMD-task-line:not([data-task='x'], [data-task='X'], [data-task='>'],
+body[data-any-task-theme='Blue Topaz'] .HyperMD-task-line:not([data-task='x'], [data-task='X'], [data-task='>'],
 	[data-task='<'], [data-task='?'], [data-task='!'], [data-task='+'], [data-task='-'],
 	[data-task='“'], [data-task='"'], [data-task='…'], [data-task='/'], [data-task='.'],
 	[data-task='A'], [data-task='D'], [data-task='￥'], [data-task='*'], [data-task='l'],
@@ -53,7 +54,7 @@ body[data-x10-css-theme='Blue Topaz'] .HyperMD-task-line:not([data-task='x'], [d
 	background-image: none;
 }
 
-[data-x10-css-theme='Blue Topaz'] .HyperMD-task-line:not([data-task='x'], [data-task='X'], [data-task='>'],
+[data-any-task-theme='Blue Topaz'] .HyperMD-task-line:not([data-task='x'], [data-task='X'], [data-task='>'],
 	[data-task='<'], [data-task='?'], [data-task='!'], [data-task='+'], [data-task='-'],
 	[data-task='“'], [data-task='"'], [data-task='…'], [data-task='/'], [data-task='.'],
 	[data-task='A'], [data-task='D'], [data-task='￥'], [data-task='*'], [data-task='l'],
@@ -67,15 +68,15 @@ body[data-x10-css-theme='Blue Topaz'] .HyperMD-task-line:not([data-task='x'], [d
 
 /* ### Things */
 
-[data-x10-css-theme='Things'] [data-task='/'] input[type=checkbox]:checked:after {
+[data-any-task-theme='Things'] [data-task='/'] input[type=checkbox]:checked:after {
 	border-radius: 0;
 	background-color: var(--color-accent);
 	content: ' ';
 }
 
-/* ### AnuPpuccin*/
+/* ### AnuPpuccin */
 
-[data-x10-css-theme='AnuPpuccin'] :is([data-task='x'], [data-task='>'], [data-task='<'],
+[data-any-task-theme='AnuPpuccin'] :is([data-task='x'], [data-task='>'], [data-task='<'],
 	[data-task='!'], [data-task='-'], [data-task='/'], [data-task='?'], [data-task='*'],
 	[data-task='n'], [data-task='l'], [data-task='i'], [data-task='I'], [data-task='S'],
 	[data-task='p'], [data-task='c'], [data-task='b'], [data-task='"'], [data-task='u'],
@@ -86,14 +87,15 @@ body[data-x10-css-theme='Blue Topaz'] .HyperMD-task-line:not([data-task='x'], [d
 	content: ' ';
 }
 
-[data-x10-css-theme='AnuPpuccin'] [data-task='x'] input[type=checkbox]:checked:after {
+[data-any-task-theme='AnuPpuccin'] [data-task='x'] input[type=checkbox]:checked:after {
 	background-color: var(--checkbox-marker-color);
 	-webkit-mask-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate%28-4.000000, -6.000000%29" fill="%23000000"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
+	mask-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate%28-4.000000, -6.000000%29" fill="%23000000"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
 }
 
 /* ### ITS Theme */
 
-[data-x10-css-theme='ITS Theme'] :is([data-task=X], [data-task=">"], [data-task="-"],
+[data-any-task-theme='ITS Theme'] :is([data-task=X], [data-task=">"], [data-task="-"],
 	[data-task=D], [data-task="?"], [data-task="/"], [data-task="+"], [data-task=R],
 	[data-task="!"], [data-task=i], [data-task=B], [data-task=P], [data-task=C],
 	[data-task=Q], [data-task=N], [data-task=b], [data-task=I], [data-task=p],
@@ -109,7 +111,7 @@ body[data-x10-css-theme='Blue Topaz'] .HyperMD-task-line:not([data-task='x'], [d
 
 /* ### Primary */
 
-[data-x10-css-theme='Primary'] :is([data-task='x'], [data-task='X'], [data-task='/'],
+[data-any-task-theme='Primary'] :is([data-task='x'], [data-task='X'], [data-task='/'],
 	[data-task='>'], [data-task='<'], [data-task='!'], [data-task='-'], [data-task='?'],
 	[data-task='*'], [data-task='n'], [data-task='l'], [data-task='i'], [data-task='S'],
 	[data-task='"'], [data-task='I'], [data-task='p'], [data-task='c'], [data-task='b'],
@@ -118,8 +120,9 @@ body[data-x10-css-theme='Blue Topaz'] .HyperMD-task-line:not([data-task='x'], [d
 	content: '';
 }
 
-[data-x10-css-theme='Primary'] :is([data-task='x'],
+[data-any-task-theme='Primary'] :is([data-task='x'],
 	[data-task='X']) input[type=checkbox]:checked:after {
 	background-color: var(--checkbox-marker-color);
 	-webkit-mask-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate%28-4.000000, -6.000000%29" fill="%23000000"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
+	mask-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate%28-4.000000, -6.000000%29" fill="%23000000"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
 }
