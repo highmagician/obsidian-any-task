@@ -1,16 +1,16 @@
 import { Plugin } from 'obsidian';
 
 export default class AnyTaskPlugin extends Plugin {
-    static ATTRIBUTE_CSS_THEME = "data-x10-css-theme";
+    static ATTRIBUTE_CSS_THEME = "data-any-task-theme";
 
     async onload() {
-        console.log("Any Task Plugin loaded");
+        this.app.workspace.onLayoutReady(() => {
+            this.setCSSTheme();
+        });
 
         this.registerEvent(this.app.workspace.on("css-change", () => {
             this.setCSSTheme();
         }));
-
-        this.setCSSTheme();
     }
 
     async onunload() {
@@ -18,9 +18,12 @@ export default class AnyTaskPlugin extends Plugin {
     }
 
     setCSSTheme() {
-        // Accessing internal config to get the current theme name
         const cssTheme = (this.app.vault as any).config?.cssTheme || 'Default';
-        document.body.setAttribute(AnyTaskPlugin.ATTRIBUTE_CSS_THEME, cssTheme);
+        const currentAttr = document.body.getAttribute(AnyTaskPlugin.ATTRIBUTE_CSS_THEME);
+        
+        if (currentAttr !== cssTheme) {
+            document.body.setAttribute(AnyTaskPlugin.ATTRIBUTE_CSS_THEME, cssTheme);
+        }
     }
 
     unsetCSSTheme() {
