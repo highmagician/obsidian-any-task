@@ -1,5 +1,5 @@
 {
-  "name": "obsidian-any-task",
+  "name": "highmagician-any-task",
   "version": "0.0.0",
   "description": "Customizes checkbox icons based on task content and theme.",
   "main": "dist/main.js",
@@ -17,7 +17,7 @@
     "build:css": "sass src/styles.scss dist/styles.css --no-source-map",
     "build:assets": "cp manifest.json README.md dist/",
     "build": "npm run clean && npm-run-all --parallel build:js build:css && npm run build:assets",
-    "deploy:sync": "set -a; [ -f .env ] && . ./.env; set +a; [ -n \"$DEPLOY_PATH\" ] && cp -rv dist/* \"$DEPLOY_PATH\" || echo 'DEPLOY_PATH not set in .env, skipping sync'",
+    "deploy:sync": "set -a; [ -f .env ] && . ./.env; set +a; [ -n \"$DEPLOY_PATH\" ] && mkdir -p \"$DEPLOY_PATH\" && cp -rv dist/* \"$DEPLOY_PATH\" || echo 'DEPLOY_PATH not set in .env, skipping sync'",
     "deploy": "npm run build && npm run deploy:sync",
     "release": "npm version patch --no-git-tag-version && npm run deploy",
     "release:major": "npm version major --no-git-tag-version && npm run deploy",
