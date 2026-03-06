@@ -3,7 +3,7 @@
 	"name": "Any Task",
 	"version": "0.1.0",
 	"minAppVersion": "1.0.0",
-	"description": "Customizes checkbox icons based on task content and theme.",
+	"description": "Renders task markers using any character as a visual checkbox.",
 	"author": "HMage",
 	"isDesktopOnly": false
 }
