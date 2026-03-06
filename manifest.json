@@ -1,11 +1,9 @@
 {
 	"id": "highmagician-any-task",
 	"name": "Any Task",
-	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
+	"version": "0.1.0",
+	"minAppVersion": "1.0.0",
 	"description": "Customizes checkbox icons based on task content and theme.",
 	"author": "HMage",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
 	"isDesktopOnly": false
 }
