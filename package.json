@@ -1,6 +1,6 @@
 {
   "name": "highmagician-any-task",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Customizes checkbox icons based on task content and theme.",
   "main": "dist/main.js",
   "type": "module",
@@ -15,7 +15,7 @@
     "lint:fix": "npm-run-all --continue-on-error \"lint:js -- --fix\" \"lint:css -- --fix\" \"lint:md -- --fix\"",
     "build:js": "tsc -noEmit && node esbuild.config.mjs production",
     "build:css": "sass src/styles.scss dist/styles.css --no-source-map",
-    "build:assets": "cp manifest.json README.md dist/",
+    "build:assets": "cp manifest.json README.md dist/ && node scripts/update_manifest.js",
     "build": "npm run clean && npm-run-all --parallel build:js build:css && npm run build:assets",
     "deploy:sync": "set -a; [ -f .env ] && . ./.env; set +a; [ -n \"$DEPLOY_PATH\" ] && mkdir -p \"$DEPLOY_PATH\" && cp -rv dist/* \"$DEPLOY_PATH\" || echo 'DEPLOY_PATH not set in .env, skipping sync'",
     "deploy": "npm run build && npm run deploy:sync",
@@ -31,6 +31,7 @@
   "author": "HMage <highmagician@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/node": "^16.11.21",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
