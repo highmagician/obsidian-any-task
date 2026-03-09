@@ -1,4 +1,4 @@
-# Any Task: Bring your checklists to life!
+# *️⃣ Any Task: Bring your checklists to life
 
 **Unlock the full potential of your Obsidian tasks. Any Task renders every task marker as a beautiful, theme-aware checkbox, giving you the freedom to use any character to categorize your workflow.**
 
