@@ -4,6 +4,8 @@
 
 Whether you're tracking progress with `/`, scheduling with `>`, or marking urgency with `!`, **Any Task** ensures these markers aren't just plain text—they are fully rendered, interactive checkboxes that look like a native part of your chosen theme.
 
+![Any Task Preview](assets/screenshot.png)
+
 ---
 
 **Author:** HMage ([highmagician@gmail.com](mailto:highmagician@gmail.com))
