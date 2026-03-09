@@ -1,9 +1,15 @@
 import { Plugin } from 'obsidian';
 
+interface ObsidianVaultConfig {
+    config?: {
+        cssTheme?: string;
+    }
+}
+
 export default class AnyTaskPlugin extends Plugin {
     static ATTRIBUTE_CSS_THEME = "data-any-task-theme";
 
-    async onload() {
+    onload() {
         this.app.workspace.onLayoutReady(() => {
             this.setCSSTheme();
         });
@@ -13,14 +19,15 @@ export default class AnyTaskPlugin extends Plugin {
         }));
     }
 
-    async onunload() {
+    onunload() {
         this.unsetCSSTheme();
     }
 
     setCSSTheme() {
-        const cssTheme = (this.app.vault as any).config?.cssTheme || 'Default';
+        const vault = this.app.vault as unknown as ObsidianVaultConfig;
+        const cssTheme = vault.config?.cssTheme || 'Default';
         const currentAttr = document.body.getAttribute(AnyTaskPlugin.ATTRIBUTE_CSS_THEME);
-        
+
         if (currentAttr !== cssTheme) {
             document.body.setAttribute(AnyTaskPlugin.ATTRIBUTE_CSS_THEME, cssTheme);
         }
